@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 }
 
 body{
-    front-family: Verdana;
+    font-family: Verdana;
     margin: 0;
 }
 
@@ -20,6 +20,7 @@ nav{
     text-align: center;
     background-color: #333;
     width: 100%;
+    height: 3rem;
 }
 
 nav a{
@@ -27,6 +28,13 @@ nav a{
     text-decoration: none;
     color: white;
 }
+
+nav a:hover{
+    color: #1abc9c;
+    text-decoration: underline;
+    font-size: 150%;
+}
+
 
 nav ul{
     margin: 0;
@@ -37,5 +45,51 @@ nav ul{
 nav li{
     list-style-type: none;
     display: inline;
-    color: white
+    color: white;
+}
+
+header{
+    padding: 30px;
+    text-align: center;
+    background-color:  #1abc9c;
+    color: #333;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.esquerda{
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+   
+}
+
+.conteudo{
+    flex: 70%;
+    padding: 20px;
+}
+
+.imgFake{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+.footer{
+    padding: 20px;
+    background-color: #333;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width: 700px){
+    .container, nav{
+        flex-direction: column;
+    }
+    header{
+        background-color: green;
+    }
 }
