@@ -83,13 +83,83 @@ header{
     background-color: #333;
     text-align: center;
     color: white;
+    flex: 100%
 }
 
 @media screen and (max-width: 700px){
     .container, nav{
         flex-direction: column;
     }
+    nav a:hover{
+        color: green;
+    }
     header{
         background-color: green;
     }
+}
+
+@media screen and (max-width: 400px){
+    nav{
+     height: 100%;   
+    }
+    nav li{
+        display: block;
+    }
+}
+
+/*CSS do form*/
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.label{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.input{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+/*para todos os inputs*/
+input{
+    color: purple;
+}
+
+/*especificos para alguns inputs*/
+input[type=text], input[type=email], input[type=tel], input[type=password]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type=submit]{
+    background-color: #4caf50;
+    float: right;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    margin: 5px;
+}
+input[type=submit]:hover{
+    background-color: #45a049;
+}
+input[type=reset]{
+    background-color: #af4c4c;
+    float: right;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    margin: 5px;
+}
+input[type=reset]:hover{
+    background-color: #eb6767;
 }
